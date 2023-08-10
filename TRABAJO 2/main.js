@@ -6,11 +6,12 @@ const prendas = [
   ];
   
   const rangosDePrecio = [
-    { nombre: "Menos de $500", min: 500, max: 500 },
-    { nombre: "Menos de $1000", min: 500, max: 1000 },
-    { nombre: "Menos de $2000", min: 500, max: 2000 },
-    { nombre: "Menos de $3000", min: 500, max: 3000 }
+    { nombre: "Menos de $500", min: 1, max: 500 },
+    { nombre: "Menos de $1000", min: 501, max: 1000 },
+    { nombre: "Menos de $2000", min: 1001, max: 2000 },
+    { nombre: "Menos de $3000", min: 2001, max: 3000 }
   ];
+  
   
   function obtenerRangoPorPrecio(precio) {
     return rangosDePrecio.find(rango => precio >= rango.min && precio <= rango.max);
@@ -18,7 +19,7 @@ const prendas = [
   
   let precioDeseado = parseInt(prompt("Ingrese el monto deseado a gastar por prenda"));
   
-  if (isNaN(precioDeseado) || precioDeseado <= 500) {
+  if (isNaN(precioDeseado) || precioDeseado <= 499) {
     alert("Monto inválido. Por favor, ingrese un número mayor a 500.");
   } else {
     const rangoElegido = obtenerRangoPorPrecio(precioDeseado);
