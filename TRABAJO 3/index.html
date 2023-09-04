@@ -1,23 +1,30 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simulador de Préstamos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Préstamo</title>
 </head>
 <body>
-  <h1>Simulador de Préstamos</h1>
+    <h1>Calculadora de Préstamo</h1>
 
-  <label for="monto">Monto del préstamo:</label>
-  <input type="number" id="monto" placeholder="Ingrese el monto">
-  <br>
+    <label for="nombre">Nombre:</label>
+<input type="text" id="nombre" />
 
-  <label for="plazo">Plazo en meses:</label>
-  <input type="number" id="plazo" placeholder="Ingrese el plazo">
-  <br>
+<label for="apellido">Apellido:</label>
+<input type="text" id="apellido" />
 
-  <button id="calcular">Calcular</button>
+    <label for="monto">Monto del préstamo:</label>
+    <input type="number" id="monto" placeholder="Ingrese el monto" step="0.01">
+    <br>
+    <label for="plazo">Plazo (meses):</label>
+    <input type="number" id="plazo" placeholder="Ingrese el plazo en meses">
+    <br>
+    <button id="calcular">Calcular</button>
+    <br>
+    <div id="resultado"></div>
 
-  <div id="resultado"></div>
-
-  <script src="./main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
