@@ -4,27 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Préstamo</title>
+    <title>Simulador de Préstamos</title>
+    <!-- Agregar enlaces a los archivos CSS y JS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Calculadora de Préstamo</h1>
+    <div class="container mt-5">
+        <h1 class="text-center">Simulador de Préstamos</h1>
+        <form id="loanForm">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="numeroCuit">Número de CUIT:</label>
+                        <input type="text" class="form-control" id="numeroCuit" placeholder="Ingrese su CUIT">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="monto">Monto del préstamo:</label>
+                        <input type="number" class="form-control" id="monto" placeholder="Ingrese el monto" step="0.01">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="plazo">Plazo (meses):</label>
+                        <input type="number" class="form-control" id="plazo" placeholder="Ingrese el plazo en meses">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary" id="calcular">Calcular</button>
+                <button type="button" class="btn btn-danger" id="borrar">Borrar</button>
+            </div>
+        </form>
+        <div class="mt-4" id="resultado"></div>
+    </div>
 
-    <label for="nombre">Nombre:</label>
-<input type="text" id="nombre" />
-
-<label for="apellido">Apellido:</label>
-<input type="text" id="apellido" />
-
-    <label for="monto">Monto del préstamo:</label>
-    <input type="number" id="monto" placeholder="Ingrese el monto" step="0.01">
-    <br>
-    <label for="plazo">Plazo (meses):</label>
-    <input type="number" id="plazo" placeholder="Ingrese el plazo en meses">
-    <br>
-    <button id="calcular">Calcular</button>
-    <br>
-    <div id="resultado"></div>
-
+    <!-- Agregar enlace al archivo JS de Bootstrap y a jQuery (requerido para Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
+
+

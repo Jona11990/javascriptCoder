@@ -1,0 +1,13 @@
+
+{
+    "tasaInteres": 0.1,
+    "moneda": "$",
+    "plazosDisponibles": [12, 24, 36, 48, 60],
+    "rangosMonto": [
+      { "min": 500, "max": 1000, "nombre": "Menos de $1000" },
+      { "min": 1000, "max": 5000, "nombre": "Entre $1000 y $5000" },
+      { "min": 5000, "max": 10000, "nombre": "Entre $5000 y $10000" }
+    ]
+  }
+  
+  
